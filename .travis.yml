@@ -1,12 +1,19 @@
+sudo: required
+
 language: node_js
 
 node_js:
   - "9"
 
-#sudo: enabled
+services:
+  - docker
 
 install: ./.install-dependencies.sh
 
 script:
-  - echo "hello world"
+  - ./.build-image.sh
+
+deploy:
+  - docker images
+  - echo "hello docker"
 

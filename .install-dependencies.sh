@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd src
+cd src/services
 
 for file in ./*
 do
@@ -16,3 +16,5 @@ do
         cd ..
     fi
 done
+
+cd ../..
