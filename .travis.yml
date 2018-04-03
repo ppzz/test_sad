@@ -1,5 +1,12 @@
 language: node_js
+
 node_js:
   - "9"
+
+#sudo: enabled
+
+install: ./install-dependencies.sh
+
 script:
   - echo "hello world"
+
