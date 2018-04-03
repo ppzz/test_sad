@@ -5,7 +5,7 @@ node_js:
 
 #sudo: enabled
 
-install: ./install-dependencies.sh
+install: ./.install-dependencies.sh
 
 script:
   - echo "hello world"
