@@ -17,9 +17,13 @@ buildImage(){
   echo $VERSION
   echo $IMAGE_NAME
   docker build -t $IMAGE_NAME .
+
+  if docker build -t $IMAGE_NAME .
+  then
+    echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    docker push $IMAGE_NAME
+  fi
 }
-
-
 
 cd src/services
 
