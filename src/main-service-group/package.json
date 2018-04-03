@@ -1,0 +1,41 @@
+{
+  "name": "main-service-group",
+  "version": "1.1.5",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node .",
+    "test": "jest",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "grace-down": "^1.0.0",
+    "joi": "^13.1.2",
+    "lodash": "^4.17.5",
+    "mongodb": "^3.0.4",
+    "n3h-action-builder": "^1.1.0",
+    "n3h-joi-validator": "^1.1.0",
+    "n3h-load-items": "^1.1.0",
+    "n3h-step-builder": "^1.1.0",
+    "nats-ex": "^1.0.1",
+    "random-object-language": "^2.0.1",
+    "recursive-readdir": "^2.2.2",
+    "request-facebook": "^2.1.2",
+    "simple-json-logger": "^2.1.0",
+    "chance": "^1.0.13",
+    "moment": "^2.21.0",
+    "the-holder": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.2",
+    "nodemon": "^1.17.2",
+    "uuid": "^3.2.1"
+  }
+}
