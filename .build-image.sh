@@ -12,9 +12,6 @@ buildImage(){
 
   IMAGE_NAME="penng/$SERVICE_NAME:$VERSION"
 
-  echo $SERVICE_NAME
-  echo $VERSION
-  echo $IMAGE_NAME
   docker build -t $IMAGE_NAME .
 
   if docker build -t $IMAGE_NAME .

@@ -13,7 +13,3 @@ install: ./.install-dependencies.sh
 script:
   - ./.build-image.sh
 
-after_script:
-  - docker images
-  - echo "hello docker"
-
