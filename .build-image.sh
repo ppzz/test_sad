@@ -4,7 +4,6 @@
 buildImage(){
   SERVICE_DIR=$1
 
---  SERVICE_DIR="$(cd $(dirname $SERVICE_DIR); pwd)/$(basename $SERVICE_DIR)"
   SERVICE_DIR="$(cd $(dirname $SERVICE_DIR); pwd)"
   PACKAGE_JSON_PATH="$SERVICE_DIR/package.json"
   SERVICE_NAME=$(grep '"name":' $PACKAGE_JSON_PATH | cut -d\" -f4)
@@ -25,6 +24,8 @@ buildImage(){
   fi
 }
 
+projectCommit=`git log -n 1 | head -n 1  | sed -e 's/^commit //' | head -c 8`
+
 cd src/services
 
 for dir in ./*
@@ -35,7 +36,12 @@ do
 
         if [ -f package.json ]
         then
-            buildImage $dir
+            serviceCommit=`git log -n 1 . | head -n 1  | sed -e 's/^commit //' | head -c 8`
+
+            if [ "$projectCommit"x = "$serviceCommit"x ]
+            then
+                buildImage $dir
+            fi
         fi
 
         cd ..
