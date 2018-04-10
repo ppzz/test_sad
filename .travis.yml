@@ -10,6 +10,10 @@ services:
 
 install: ./.install-dependencies.sh
 
-script:
-  - ./.build-image.sh
+#script:
+#  - ./.build-image.sh
 
+notifications:
+  webhooks:
+    urls:
+      - secure: "j2vQzL8TkDrAxWR8Jhkh2+5idfM/0MLbq9xue1edcW9WLCfhNOW3kR7Ra5dxw8gUI5ahFPyROx85efMiMl11zU3Y2c5C+nbyHVcs2UDrNOf9IqlTm4gUhDOtk5UmjnjGivwZq3oymo4PiGl6F4mrOMuRr/knKBHM1/FFKR/Uy5Tzk5lTNMWrBvcZF6DefJEU6kVJStJ9t6XZR2oP/RRJBUZOAATzkKl4o+NTcyPQozxZjlbtgUYgMj05b3LiWwDLqkJzxxZri443SauMuzL/GME/R/UkfBG9t4RjOx9LkWeP16X3rO2UyN6zY8h4T+P25r/FBsbN3xjcsN4r902f4Xd73SuZuTFU3iheYy65mwsvXL8RMUy9zuIex/x6uxxI3anVjGpsmcRHpznoL2qnF8/KzK6O4VN78RW7R6a6EmDvZQ9N2sO9+qHGY/IPmHw9XfeXsszh4WcsRbG1/thOek5xOIpp1Q20Rkp/CPkIT9RoUz2SCt4jhfeOPvDv+3dkP2d6+Kxd8OVf+tjly2USA6PqRH7hMyK+jg7zEc+OUK4Rfq5wVgUsS/TImtEAhKukKZubfasiAIWXLu+9yEzgh7zEUG5Enh7HT3SFsvimFhM5CN2wFZIfWg377TgQhJOtPVfcrUAaxdW9xwP7Wr+GC0SPAY7N6qlIUzX7AkOGxMU="
